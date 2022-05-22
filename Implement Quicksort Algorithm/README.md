@@ -18,3 +18,10 @@ Sample Input
 Expected Output
 1 2 3 4 5
 4 11 200
+
+<h1> Implemented Solutions </h2>
+<ul> 
+  <li> Quick Sort with last element as pivot </li>
+  <li>  Quick Sort with first element as pivot </li>
+  <li>  Quick Sort with random element as pivot </li>
+</ul>
