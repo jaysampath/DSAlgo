@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class QuickSortPivotFirstElement {
     private void quicksort(int[] arr, int low, int high){
         if(low<high){
