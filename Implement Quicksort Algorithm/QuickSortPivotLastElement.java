@@ -3,26 +3,40 @@ import java.util.Arrays;
 public class QuickSortPivotLastElement {
 
     void quicksort(int[] arr, int low, int high){
-        if(low<high){
-            int pi = partition(arr,low,high);
-
-            quicksort(arr,pi+1,high);
-            quicksort(arr,low,pi-1);
-        }
-    }
-
-    private int partition(int[] arr, int low, int high) {
-        int pivot = arr[high];
-        int i = low-1;
-        for(int j=low;j<high;j++){
-            if(arr[j]<pivot){
-                i++;
-                swap(arr,i,j);
-            }
-        }
-        swap(arr,i+1,high);
-        return i+1;
-    }
+		if(low<high){
+			//get the pivot
+			int pi = partition(arr,low,high);
+			//sort the left half of pivot
+			quicksort(arr,low,pi-1);
+			//sort the right half of pivot
+			quicksort(arr,pi+1,high);
+		}
+	}
+	
+	int partition(int[] arr, int low, int high){
+		//implement the partition
+		
+		//choose an element as pivot
+		//choosing the last element in this case
+		int pivot = arr[high];
+		
+		//start value
+		int i = low-1;
+		
+	    //replace small elements before pivot
+		for(int j=low;j<high;j++){
+			if(arr[j]<pivot){
+				i++;
+				swap(arr,i,j);
+			}
+		}
+		
+		//place pivot at the right position
+		swap(arr,i+1,high);
+		
+		//return the right position
+		return i+1;
+	}
 
     private void swap(int[] arr, int i, int j) {
         int temp = arr[i];
