@@ -1,0 +1,8 @@
+Given a singly linked list, we need to arrange the consonants and vowel nodes of it in such a way that all the vowel nodes come before the consonants while maintaining the order of their arrival.
+
+Examples: 
+
+Input : a -> b -> c -> e -> d -> 
+        o -> x -> i
+Output : a -> e -> o -> i -> b -> 
+         c -> d -> x
